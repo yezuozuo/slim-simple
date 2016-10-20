@@ -1,3 +1,4 @@
 <?php
 
-$app->get('/','HomeController:index')->setName('home');
+$app->get('/','HomeController:index');
+$app->get('/db','HomeController:db');

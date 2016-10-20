@@ -7,6 +7,9 @@ session_start();
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/helpers.php';
 
+$env = new Dotenv\Dotenv(__DIR__.'/../');
+$env->load();
+
 $app = new \Slim\App([
 	'settings' => [
 		'displayErrorDetails' => true,
@@ -37,6 +40,5 @@ $container['view'] = function ($container) {
 $container['HomeController'] = function($container) {
 	return new \App\Controllers\HomeController($container);
 };
-
 
 require __DIR__ . '/../app/routes.php';
