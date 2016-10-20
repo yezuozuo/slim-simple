@@ -10,6 +10,12 @@ use App\Models\Main;
  * @package App\Controllers
  */
 class HomeController extends Controller {
+
+    /**
+     * @param $request
+     * @param $response
+     * @return \Psr\Http\Message\ResponseInterface
+     */
     public function index($request, $response) {
         //$this->flash->addMessage('info', 'This is a message');
         //$this->flash->addMessage('error', 'This is a message');
@@ -17,6 +23,9 @@ class HomeController extends Controller {
         return $this->view->render($response, 'home.twig');
     }
 
+    /**
+     *
+     */
     public function db() {
         $model = new Main();
         $sdb = $model->sdb;

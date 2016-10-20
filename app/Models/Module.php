@@ -7,7 +7,6 @@ namespace App\Models;
  *
  * @package App\Models
  */
-class Module
-{
+class Module extends Main {
 
 }

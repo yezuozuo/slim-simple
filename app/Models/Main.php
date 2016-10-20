@@ -20,6 +20,9 @@ class Main {
      */
     public $sdb;
 
+    /**
+     * Main constructor.
+     */
     public function __construct() {
         $config   = array(
             'dbms'       => 'mysql',
