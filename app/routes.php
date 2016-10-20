@@ -18,3 +18,14 @@ $app->get('/echarts',function ($request, $response){
 $app->get('/echarts/bar',function ($request, $response){
     return $this->view->render($response,'/module/charts/bar.twig');
 });
+
+$app->get('/echarts/line',function ($request, $response){
+    return $this->view->render($response,'/module/charts/line.twig');
+});
+
+$app->get('/echarts/pie',function ($request, $response){
+    return $this->view->render($response,'/module/charts/pie.twig');
+});
+/**
+ * end lab
+ */
