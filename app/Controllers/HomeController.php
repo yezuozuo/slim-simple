@@ -28,7 +28,7 @@ class HomeController extends Controller {
      */
     public function db() {
         $model = new Main();
-        $sdb = $model->sdb;
+        $sdb   = $model->sdb;
         $sdb->select('*'); //$sdb->select('*',true);
         $sdb->from('d_users');
         $sdb->where('id=1'); //$sdb->where('*id=1',true);

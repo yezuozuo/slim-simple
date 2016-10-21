@@ -10,7 +10,7 @@
     <script src="/assets/gentelella/vendors/pnotify/dist/pnotify.nonblock.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             new PNotify({
                 title: "PNotify",
                 type: "info",
@@ -21,7 +21,7 @@
                 addclass: 'dark',
                 styling: 'bootstrap3',
                 hide: false,
-                before_close: function(PNotify) {
+                before_close: function (PNotify) {
                     PNotify.update({
                         title: PNotify.options.title + " - Enjoy your Stay",
                         before_close: null

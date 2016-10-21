@@ -23,6 +23,10 @@ class Controller {
      * @param $container
      */
     public function __construct($container) {
+        if (isset($_SESSION['title']) && isset($_SESSION['footer'])) {
+            $_SESSION['title']  = getenv('title');
+            $_SESSION['footer'] = getenv('footer');
+        }
         $this->container = $container;
     }
 

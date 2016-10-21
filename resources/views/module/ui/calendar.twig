@@ -9,7 +9,9 @@
         <div class="col-md-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Calendar Events <small>Sessions</small></h2>
+                    <h2>Calendar Events
+                        <small>Sessions</small>
+                    </h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -27,7 +29,8 @@
         </div>
     </div>
 
-    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -47,7 +50,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Description</label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                    <textarea class="form-control" style="height:55px;" id="descr"
+                                              name="descr"></textarea>
                                 </div>
                             </div>
                         </form>
@@ -60,7 +64,8 @@
             </div>
         </div>
     </div>
-    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -81,7 +86,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Description</label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                                    <textarea class="form-control" style="height:55px;" id="descr2"
+                                              name="descr"></textarea>
                                 </div>
                             </div>
 
@@ -103,7 +109,7 @@
     <script src="/assets/gentelella/vendors/fullcalendar/dist/fullcalendar.min.js"></script>
 
     <script>
-        $(window).load(function() {
+        $(window).load(function () {
             var date = new Date(),
                     d = date.getDate(),
                     m = date.getMonth(),
@@ -119,13 +125,13 @@
                 },
                 selectable: true,
                 selectHelper: true,
-                select: function(start, end, allDay) {
+                select: function (start, end, allDay) {
                     $('#fc_create').click();
 
                     started = start;
                     ended = end;
 
-                    $(".antosubmit").on("click", function() {
+                    $(".antosubmit").on("click", function () {
                         var title = $("#title").val();
                         if (end) {
                             ended = end;
@@ -153,13 +159,13 @@
                         return false;
                     });
                 },
-                eventClick: function(calEvent, jsEvent, view) {
+                eventClick: function (calEvent, jsEvent, view) {
                     $('#fc_edit').click();
                     $('#title2').val(calEvent.title);
 
                     categoryClass = $("#event_type").val();
 
-                    $(".antosubmit2").on("click", function() {
+                    $(".antosubmit2").on("click", function () {
                         calEvent.title = $("#title2").val();
 
                         calendar.fullCalendar('updateEvent', calEvent);
