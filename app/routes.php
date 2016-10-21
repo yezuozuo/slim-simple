@@ -29,4 +29,23 @@ $app->get('/lab/table',function ($request, $response){
     return $this->view->render($response,'/module/table.twig');
 });
 
+$app->get('/lab/ui/tab',function ($request, $response){
+    return $this->view->render($response,'/module/ui/tab.twig');
+});
+
+$app->get('/lab/ui/modal',function ($request, $response){
+    return $this->view->render($response,'/module/ui/modal.twig');
+});
+
+$app->get('/lab/ui/pnotify',function ($request, $response){
+    return $this->view->render($response,'/module/ui/pnotify.twig');
+});
+
+$app->get('/lab/ui/notify',function ($request, $response){
+    return $this->view->render($response,'/module/ui/notify.twig');
+});
+
+$app->get('/lab/ui/calendar',function ($request, $response){
+    return $this->view->render($response,'/module/ui/calendar.twig');
+});
 /** end lab **/
