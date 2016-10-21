@@ -60,4 +60,16 @@ $app->get('/lab/form/wizard',function ($request, $response){
 $app->get('/lab/form/validation',function ($request, $response){
     return $this->view->render($response,'/module/form/validation.twig');
 });
+
+$app->get('/lab/form/textareas',function ($request, $response){
+    return $this->view->render($response,'/module/form/textareas.twig');
+});
+
+$app->get('/lab/form/inputmask',function ($request, $response){
+    return $this->view->render($response,'/module/form/inputmask.twig');
+});
+
+$app->get('/lab/form/datepicker',function ($request, $response){
+    return $this->view->render($response,'/module/form/datepicker.twig');
+});
 /** end lab **/
