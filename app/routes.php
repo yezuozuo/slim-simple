@@ -9,6 +9,10 @@ $app->get('/lab/contact',function ($request, $response){
     return $this->view->render($response,'/module/contacts.twig');
 });
 
+$app->get('/lab/head',function ($request, $response){
+    return $this->view->render($response,'/module/head.twig');
+});
+
 $app->get('/lab/echarts',function ($request, $response){
     return $this->view->render($response,'/module/charts/echarts.twig');
 });
@@ -47,5 +51,13 @@ $app->get('/lab/ui/notify',function ($request, $response){
 
 $app->get('/lab/ui/calendar',function ($request, $response){
     return $this->view->render($response,'/module/ui/calendar.twig');
+});
+
+$app->get('/lab/form/wizard',function ($request, $response){
+    return $this->view->render($response,'/module/form/wizard.twig');
+});
+
+$app->get('/lab/form/validation',function ($request, $response){
+    return $this->view->render($response,'/module/form/validation.twig');
 });
 /** end lab **/
