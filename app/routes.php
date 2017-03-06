@@ -72,4 +72,13 @@ $app->get('/lab/form/inputmask', function ($request, $response) {
 $app->get('/lab/form/datepicker', function ($request, $response) {
     return $this->view->render($response, '/module/form/datepicker.twig');
 });
+
+/** ajax **/
+$app->get('/lab/ajax/echarts/line', function ($request, $response) {
+    return $this->view->render($response, '/module/ajax/line.twig');
+});
+
+$app->get('/lab/ajax/echarts/line/server', 'App\Controllers\AjaxController:line');
+
+
 /** end lab **/
